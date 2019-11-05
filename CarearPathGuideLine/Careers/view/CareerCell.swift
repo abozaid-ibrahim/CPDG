@@ -11,7 +11,7 @@ import SwiftUI
 struct CareerCell: View {
     var job: Job
     var body: some View {
-        NavigationLink(destination: Text("adf")){
+        NavigationLink(destination: JobLevelsView(job:job)){
             HStack {
                 Image(job.logo).clipShape(Circle()).overlay(Circle().stroke(lineWidth: 2))
                 VStack(alignment: .leading) {
@@ -22,8 +22,11 @@ struct CareerCell: View {
                 
                 Text("1").font(.caption)
                     .padding()
-                    .foregroundColor(.red)
+                   
+                     .background(Color.black)
+                     .foregroundColor(.white)
                     .clipShape(Circle())
+                   
             }
         }}
 }
