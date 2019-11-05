@@ -11,16 +11,14 @@ import SwiftUI
 struct ContentView: View {
     let careers = CareerRepo().getCareers()
     var body: some View {
-        NavigationView{
-            List{
-                ForEach(careers){career in
-                    Section(header: Text(career.title)){
-                        ForEach(career.jobs){job in
+        NavigationView {
+            List {
+                ForEach(careers) { career in
+                    Section(header: Text(career.title)) {
+                        ForEach(career.jobs) { job in
                             CareerCell(job: job)
                         }
-                        
                     }
-                    
                 }
             }.navigationBarTitle("Careers")
         }

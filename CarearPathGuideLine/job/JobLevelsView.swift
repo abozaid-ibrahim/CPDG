@@ -9,16 +9,15 @@
 import SwiftUI
 
 struct JobLevelsView: View {
-    var job:Job
+    var job: Job
     var body: some View {
-        VStack{
-        ZStack{
-            Image(job.logo)
-            Text("\(job.id)")
-        }
+        VStack {
+            ZStack(alignment: .bottomTrailing) {
+                Image(job.logo)
+                Text("\(job.id)").background(Color.gray).foregroundColor(Color.white).offset(x: -5, y: -5)
+            }
             Text("Levels")
         }
-        
     }
 }
 

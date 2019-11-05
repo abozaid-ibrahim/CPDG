@@ -11,24 +11,28 @@ import SwiftUI
 struct CareerCell: View {
     var job: Job
     var body: some View {
-        NavigationLink(destination: JobLevelsView(job:job)){
+        NavigationLink(destination: JobLevelsView(job: job)) {
             HStack {
-                Image(job.logo).clipShape(Circle()).overlay(Circle().stroke(lineWidth: 2))
+                Image(job.logo)
+                    .clipShape(Circle())
+                    .overlay(Circle().stroke(lineWidth: 2))
+                
                 VStack(alignment: .leading) {
                     Text(job.title)
                     Text(job.title)
                 }.layoutPriority(1)
-                Spacer()
                 
+                Spacer()
+
                 Text("1").font(.caption)
                     .padding()
-                   
-                     .background(Color.black)
-                     .foregroundColor(.white)
+
+                    .background(Color.black)
+                    .foregroundColor(.white)
                     .clipShape(Circle())
-                   
             }
-        }}
+        }
+    }
 }
 
 struct CareerCell_Previews: PreviewProvider {
