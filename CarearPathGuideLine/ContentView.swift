@@ -9,8 +9,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    let
+    let jobs = ["iOS Developer", "Android Developer"]
     var body: some View {
-        Text("Hello World")
+        List{
+            Section(header: Text("Mobile Developers"))
+            ForEach(jobs,id:\.self){section in
+                 Text(section)
+            }
+           
+        }
     }
 }
 
